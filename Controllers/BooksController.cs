@@ -50,8 +50,7 @@ namespace BookStore.Controllers
         [HttpPost]
         public IActionResult Post([FromBody]Book book)
         {
-            if (ModelState.IsValid == false)
-                return BadRequest();
+            if (ModelState.IsValid == false) return BadRequest(ModelState);
             try
             {
                 _context.Books.Add(book);

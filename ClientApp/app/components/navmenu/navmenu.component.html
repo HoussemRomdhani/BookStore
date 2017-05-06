@@ -12,6 +12,11 @@
         <div class='clearfix'></div>
         <div class='navbar-collapse collapse'>
             <ul class='nav navbar-nav'>
+                <li [routerLinkActive]="['link-active']">
+                    <a [routerLink]="['/books']">
+                        <span class='glyphicon glyphicon-th-list'></span> Books
+                    </a>
+                </li>
             </ul>
         </div>
     </div>
